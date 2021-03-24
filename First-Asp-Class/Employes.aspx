@@ -20,7 +20,7 @@
                 <td>
                     <asp:TextBox ID="Textid" runat="server"></asp:TextBox>
                    
-                    <asp:Button ID="btnsearch" runat="server" Text="Search" CssClass="btn btn-success"/>
+                    <asp:Button ID="btnsearch" runat="server" Text="Search" CssClass="btn btn-success" OnClick="btnsearch_Click"/>
                        
                 </td>
                 <td>
@@ -65,12 +65,18 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="3"> 
-                    <asp:Button ID="btnsave" runat="server" Text="Save" CssClass="btn btn-primary" /> 
+                <td colspan="2"> 
+                    <asp:Button ID="btnsave" runat="server" Text="Save" CssClass="btn btn-primary" OnClick="btnsave_Click" /> 
                     <asp:Button ID="btnupdate" runat="server" Text="Update" CssClass="btn btn-info" /> 
                     <asp:Button ID="btndelete" runat="server" Text="Delete"  CssClass="btn btn-danger"/> 
 
                 </td>
+
+                <td> <asp:Label ID="LabelMsg" runat="server"> </asp:Label> </td>
+            </tr>
+
+            <tr class="text-center">
+                <asp:GridView ID="EmployesGridView" runat="server"> </asp:GridView>
             </tr>
         </table>
     </form>
