@@ -69,15 +69,18 @@
                     <asp:Button ID="btnsave" runat="server" Text="Save" CssClass="btn btn-primary" OnClick="btnsave_Click" /> 
                     <asp:Button ID="btnupdate" runat="server" Text="Update" CssClass="btn btn-info" /> 
                     <asp:Button ID="btndelete" runat="server" Text="Delete"  CssClass="btn btn-danger"/> 
+                    <asp:Button ID="btnclear" runat="server" Text="Clear" CssClass="btn btn-info" OnClick="btnclear_Click" /> 
 
                 </td>
 
                 <td> <asp:Label ID="LabelMsg" runat="server"> </asp:Label> </td>
             </tr>
 
-            <tr class="text-center">
-                <asp:GridView ID="EmployesGridView" runat="server"> </asp:GridView>
-            </tr>
+            <tr>
+                <td colspan="3">
+                <asp:GridView ID="EmployesGridView" runat="server"  style="margin:0 auto 0 auto"> </asp:GridView>
+                </td>
+           </tr>
         </table>
     </form>
     <script src="Scripts/bootstrap.min.js"></script>

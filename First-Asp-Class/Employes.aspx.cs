@@ -41,11 +41,11 @@ namespace First_Asp_Class
             if (dt != null)
             {
                 Textname.Text = dt.Rows[0]["name"].ToString();
-                Textname.Text = dt.Rows[0]["email"].ToString();
-                Textname.Text = dt.Rows[0]["address"].ToString();
-                Textname.Text = dt.Rows[0]["phonenumber"].ToString();
-                Textname.Text = dt.Rows[0]["designation"].ToString();
-                Textname.Text = dt.Rows[0]["employecode"].ToString();
+                Textemail.Text = dt.Rows[0]["email"].ToString();
+                Textaddress.Text = dt.Rows[0]["address"].ToString();
+                Textphonenumber.Text = dt.Rows[0]["phonenumber"].ToString();
+                Textdesignation.Text = dt.Rows[0]["designation"].ToString();
+                Textemployecode.Text = dt.Rows[0]["employecode"].ToString();
             }
             LoadGridView();
         }
@@ -59,6 +59,17 @@ namespace First_Asp_Class
                 EmployesGridView.DataSource = dt;
                 EmployesGridView.DataBind();
             }
+        }
+
+        protected void btnclear_Click(object sender, EventArgs e)
+        {
+            Textid.Text = String.Empty;
+            Textname.Text = String.Empty;
+            Textemail.Text = String.Empty;
+            Textaddress.Text = String.Empty;
+            Textphonenumber.Text = String.Empty;
+            Textdesignation.Text = String.Empty;
+            Textemployecode.Text = String.Empty;
         }
     }
 }
